@@ -1,7 +1,7 @@
 require_relative("../db/sql_runner")
 
 class Animal
-  attr_reader :id, :name, :type, :breed, :adoptable, :admission_date
+  attr_reader :id, :name, :type, :breed, :adoptable, :admission_date, :image
 
   def initialize(options)
     @id = options['id'].to_i()
@@ -10,19 +10,20 @@ class Animal
     @breed = options['breed']
     @adoptable = options['adoptable']
     @admission_date = options['admission_date']
+    @image = options['image']
   end
 
   def save()
     sql = "INSERT INTO animals
     (
-      name, type, breed, adoptable, admission_date
+      name, type, breed, adoptable, admission_date, image
     )
     VALUES
     (
-      $1, $2, $3, $4, $5
+      $1, $2, $3, $4, $5, $6
     )
     RETURNING id"
-    values = [@name, @type, @breed, @adoptable, @admission_date]
+    values = [@name, @type, @breed, @adoptable, @admission_date, @image]
     results = SqlRunner.run(sql, values)
     @id = results.first()['id'].to_i
   end

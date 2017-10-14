@@ -1,23 +1,24 @@
-DROP TABLE pet;
-DROP TABLE animal;
-DROP TABLE owner;
+DROP TABLE pets;
+DROP TABLE animals;
+DROP TABLE owners;
 
-CREATE TABLE owner (
+CREATE TABLE owners (
   id SERIAL8 PRIMARY KEY,
   name VARCHAR(255)
 );
 
-CREATE TABLE animal (
+CREATE TABLE animals (
   id SERIAL8 PRIMARY KEY,
   name VARCHAR(255),
   type VARCHAR(255),
   breed VARCHAR(255),
   adoptable boolean,
-  admission_date date
+  admission_date date,
+  image VARCHAR(255)
 );
 
-CREATE TABLE pet (
+CREATE TABLE pets (
   id SERIAL8 PRIMARY KEY,
-  owner_id INT8 REFERENCES owner(id),
-  animal_id INT8 REFERENCES animal(id)
+  owner_id INT8 REFERENCES owners(id),
+  animal_id INT8 REFERENCES animals(id)
 );

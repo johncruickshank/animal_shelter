@@ -11,7 +11,7 @@ class Owner
   def save()
     sql = "INSERT INTO owners
     (
-      name,
+      name
     )
     VALUES
     (
@@ -55,7 +55,7 @@ class Owner
     sql = "SELECT animals.* FROM animals INNER JOIN pets ON pets.owner_id = animals.id WHERE owner_id = $1"
     values = [@id]
     animals = SqlRunner.run(sql, values)
-    return animals.map { |animal| Animal.new(animal)}    
+    return animals.map { |animal| Animal.new(animal)}
   end
 
 end
