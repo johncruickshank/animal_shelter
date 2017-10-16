@@ -63,4 +63,15 @@ class Animal
     return owners.map { |owner| Owner.new(owner)}
   end
 
+  def update()
+    sql = "UPDATE animals
+    SET
+    (
+      name, type, breed, adoptable, admission_date, image) =
+    ($1, $2, $3, $4, $5, $6)
+    WHERE id = $7"
+    values = [@name, @type, @breed, @adoptable, @admission_date, @image, @id]
+    SqlRunner.run(sql, values)
+  end
+
 end

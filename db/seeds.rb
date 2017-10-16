@@ -24,7 +24,7 @@ animal1 = Animal.new({
   'breed' => 'lop',
   'adoptable' => true,
   'admission_date' => '1/1/16',
-  'image' => '../public/images/belle.jpg'
+  'image' => '/images/belle.jpg'
   })
 animal2 = Animal.new({
   'name' => 'Max',
@@ -32,7 +32,7 @@ animal2 = Animal.new({
   'breed' => 'lop',
   'adoptable' => true,
   'admission_date' => '1/1/16',
-  'image' => '../public/images/max.jpg'
+  'image' => '/images/max.jpg'
   })
 animal3 = Animal.new({
   'name' => 'Stamford',
@@ -40,7 +40,7 @@ animal3 = Animal.new({
   'breed' => 'pointer',
   'adoptable' => false,
   'admission_date' => '10/10/17',
-  'image' => '../public/images/stamford.jpg'
+  'image' => '/images/stamford.jpg'
   })
 animal4 = Animal.new({
   'name' => 'Ben',
@@ -48,7 +48,7 @@ animal4 = Animal.new({
   'breed' => 'german shepard',
   'adoptable' => true,
   'admission_date' => '5/11/16',
-  'image' => '../public/images/ben.jpg'
+  'image' => '/images/ben.jpg'
   })
 animal5 = Animal.new({
   'name' => 'Charlie',
@@ -56,7 +56,7 @@ animal5 = Animal.new({
   'breed' => 'mix',
   'adoptable' => true,
   'admission_date' => '12/16/16',
-  'image' => '../public/images/charlie.jpg'
+  'image' => '/images/charlie.jpg'
   })
 animal6 = Animal.new({
   'name' => 'Hoppy',
@@ -64,7 +64,7 @@ animal6 = Animal.new({
   'breed' => 'ragdoll',
   'adoptable' => false,
   'admission_date' => '1/9/17',
-  'image' => '../public/images/hoppy.jpg'
+  'image' => '/images/hoppy.jpg'
   })
 
 animal1.save()

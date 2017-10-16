@@ -7,7 +7,7 @@ get '/pets' do
   erb ( :"pets/index" )
 end
 
-get '/bitings/new' do
+get '/pets/new' do
   @owners = Owner.all()
   @animals = Animal.all()
   erb(:"pets/new")

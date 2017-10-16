@@ -1,0 +1,54 @@
+<table id="animals">
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th>Type</th>
+    <th></th>
+    <th>Breed</th>
+    <th></th>
+    <th>Available for Adoption?</th>
+    <th></th>
+    <th>Admission Date</th>
+    <th></th>
+    <th>Image</th>
+    <th></th>
+    <th>Action</th>
+  </tr>
+  <% for animal in @animals %>
+  <tr>
+    <td><%= animal.name %></td>
+    <td> </td>
+    <td><%= animal.type %></td>
+    <td> </td>
+    <td><%= animal.breed %></td>
+    <td> </td>
+    <td><%= if animal.adoptable == 't'
+        p 'yes'
+      else
+        p 'no'
+    end %></td>
+    <td> </td>
+    <td><%= animal.admission_date %></td>
+    <td> </td>
+    <td><img src=<%= animal.image() %> alt=<%=animal.name%>_pic> </p></td>
+    <td>
+      <form class="addPet" action="/pets" method="POST">
+        <input type="submit" value="Submit">
+        <input type="hidden" name="animal_id" value="<%=animal.id%>">
+        <label for="selectOwner" class="dropdown">Adopt!</label>
+        <select name="owner_id" id="selectOwner">
+          <% for owner in @owners %>
+            <option value="<%= owner.id %>"><%=owner.name%></option>
+          <% end %>
+        </select>
+      </form>
+
+        <a href="/animals/<%= animal.id %>/edit">Edit</a>
+
+        <form action="/animals/<%= animal.id %>/delete" method="POST">
+          <input type="submit" value="delete" />
+        </form>
+      </td>
+  </tr>
+  <% end %>
+</table>

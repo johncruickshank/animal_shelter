@@ -1,0 +1,39 @@
+body {
+  background-color: rgb(244, 243, 226);
+  min-height: 75%;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  font-size: 30px;
+  text-decoration: none;
+  color: rgb(16, 63, 156);
+  list-style-type: none;
+  justify-content: space-around;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+}
+
+nav ul li a:hover {
+  color: #7a34c9;
+  text-decoration: none;
+}
+
+footer {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin: 0 0 0 0;
+  position: relative;
+}

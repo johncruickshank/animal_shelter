@@ -5,10 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="icon" href="/images/logo.png" />
+  <link rel="stylesheet" href="/styles/main.css">
+  <link rel="stylesheet" href="/styles/tables.css">
   <title>Animal Shelter</title>
 </head>
 <body>
-  <h1>test</h1>
+  <nav>
+    <div class="home">
+    <a id=logo href="/"><img src="/images/logo.png" alt="home"
+      style="width:55px;height:55px;border:0;"></a>
+    </div>
+    <ul>
+      <li>
+        <a href="/animals">All Animals</a>
+      </li>
+      <li>
+        <a href="/owners">Potential Owners</a>
+      </li>
+      <li>
+        <a href="/pets">Adopted Animals</a>
+      </li>
+      <li>
+        <a href="/animals/new">Add an Animal</a>
+      </li>
+      <li>
+        <a href="/owners/new">Add an Owner</a>
+      </li>
+    </ul>
+  </nav>
+  <section id="pages">
+    <%=yield%>
+  </section>
+  <footer>
+    <img src="/images/background.jpg" width = 100%>
+  </footer>
 
 </body>
 </html>

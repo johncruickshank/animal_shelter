@@ -1,0 +1,18 @@
+<table id="pets">
+  <tr>
+    <th>Our Success Stories!</th>
+    <th></th>
+  </tr>
+  <% for pet in @pets %>
+  <tr>
+    <td><%= (Owner.find(pet.owner_id)).name %> adopted <%= (Animal.find(pet.animal_id)).name %> the <%= (Animal.find(pet.animal_id)).type %></td>
+    <td> </td>
+    <td>
+    <form action="/pets/<%= pet.id %>/delete" method="POST">
+      <input type="submit" value="remove" />
+    </form>
+    </td>
+
+  </tr>
+  <% end %>
+</table>

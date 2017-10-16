@@ -1,0 +1,26 @@
+<form class="add" action="/animals" method="POST">
+
+  <label for="name">Name:</label>
+  <input type="text" required="required" name="name" id="name" />
+
+  <label for="type">Type:</label>
+  <input type="text" required="required" name="type" id="type" />
+
+  <label for="breed">Breed:</label>
+  <input type="text" required="required" name="breed" id="breed" />
+
+  <label for="adoptable">Available for Adoption?:</label>
+  <select name="adoptable" id="adoptable">
+    <option value=true>yes</option>
+    <option value=false>no</option>
+  </select>
+
+  <label for="admission_date">Admission Date:</label>
+  <input type="date" required="required" name="admission_date" id="admission_date" />
+
+  <label for="image">Image Link:</label>
+  <input type="text" required="required" name="image" id="image" />
+
+  <input type="submit" value="Submit">
+
+</form>
