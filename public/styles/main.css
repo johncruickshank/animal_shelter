@@ -1,6 +1,7 @@
 body {
   background-color: rgb(244, 243, 226);
   min-height: 75%;
+  font-family: 'Signika', 'Cuprum', sans-serif;
 }
 
 nav {
@@ -13,7 +14,7 @@ nav {
   justify-content: space-around;
 }
 
-ul {
+ul li a {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
