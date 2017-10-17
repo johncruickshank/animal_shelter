@@ -29,7 +29,7 @@ class Animal
   end
 
   def self.all()
-    sql = "SELECT * FROM animals"
+    sql = "SELECT * FROM animals ORDER BY type"
     values = []
     results = SqlRunner.run(sql, values)
     return results.map { |animal| Animal.new(animal) }

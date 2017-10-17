@@ -1,0 +1,8 @@
+#delete {
+background-image: url(/images/delete.png);
+background-repeat: no-repeat;
+background-position: 50% 50%;
+height: 42px;
+width: 42px;
+border: none;
+}

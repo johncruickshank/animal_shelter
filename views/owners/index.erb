@@ -1,12 +1,10 @@
 <table id="owners">
   <tr>
     <th>Potential/Current Owners</th>
-    <th></th>
   </tr>
   <% for owner in @owners %>
   <tr>
     <td><%= owner.name %></td>
-    <td> </td>
     <td><a href="/owners/<%= owner.id %>/edit">Edit</a>
 
     <form action="/owners/<%= owner.id %>/delete" method="POST">

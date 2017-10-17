@@ -1,14 +1,21 @@
-td, th {
-  text-align: left;
+#animals {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+  padding: 0;
 }
 
-td {
-  padding: 10px 20px 0px 0px;
+#pets tr {
+  width: 75%;
 }
 
 th {
-  padding: 0px 20px 10px 0px;
-  border-bottom: 1px solid papayawhip;
+  background-color: rgb(64, 177, 226);
+  font-style: bold;
+}
+
+td {
+  max-width: 210px;
 }
 
 tr {
@@ -17,4 +24,27 @@ tr {
 
 td img {
   max-width: 150px;
+  max-height: 150px;
+}
+
+td img:hover {
+  transform: scale(3);
+}
+
+#edit {
+  transition-property: none;
+}
+
+table tr:nth-child(even) {
+    background-color: rgb(170, 224, 238);
+}
+
+table tr:nth-child(odd) {
+    background-color: rgb(144, 212, 245);
+}
+
+.actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }

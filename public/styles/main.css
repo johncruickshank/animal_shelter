@@ -1,40 +1,55 @@
 body {
-  background-color: rgb(244, 243, 226);
   min-height: 75%;
   font-family: 'Signika', 'Cuprum', sans-serif;
 }
 
 nav {
+  background-color: rgb(244, 243, 226);
   display: flex;
   flex-direction: row;
-  font-size: 30px;
-  text-decoration: none;
-  color: rgb(16, 63, 156);
+  font-size: 20px;
   list-style-type: none;
-  justify-content: space-around;
+  text-decoration: none;
 }
 
-ul li a {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+nav ul li a {
+  color: rgb(101, 32, 125);
+  padding: 0 20px;
+  text-decoration: none;
 }
 
 nav ul {
   display: flex;
   flex-direction: row;
   list-style-type: none;
+  justify-content: space-around;
 }
 
 nav ul li a:hover {
   color: #7a34c9;
   text-decoration: none;
+  font-size: 125%;
 }
 
 footer {
   bottom: 0;
   left: 0;
   width: 100%;
-  margin: 0 0 0 0;
   position: relative;
+}
+
+h1 {
+  font-size: 3em;
+  text-align: center;
+  color: rgb(101, 32, 125);
+}
+
+p {
+  font-size: 1.25em;
+  color: rgb(101, 32, 125);
+  padding: 0 20%;
+}
+
+#pages {
+  padding-top: 25px;
 }
