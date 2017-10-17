@@ -34,3 +34,21 @@ post '/animals/:id/delete' do
   Animal.destroy(params[:id])
   redirect to("/animals")
 end
+
+get '/find_type' do
+  @animals = Animal.find_type(params[:type])
+  @owners = Owner.all()
+  erb (:"animals/index")
+end
+
+get '/find_breed' do
+  @animals = Animal.find_breed(params[:breed])
+  @owners = Owner.all()
+  erb (:"animals/index")
+end
+
+get '/find_adopt' do
+  @animals = Animal.only_adopt(params[:adoptable])
+  @owners = Owner.all()
+erb (:"animals/index")
+end

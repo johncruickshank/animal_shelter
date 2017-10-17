@@ -1,4 +1,26 @@
-<table id="animals">
+<div class="only_adopt">
+  <form action="/find_adopt" method="get">
+    <label for="findBreed">Only show animals ready for adoption:</label>
+    <input type="checkbox" name="adoptable" value="true">
+    <input type="submit" value="Go">
+  </form>
+</div>
+<div class="search_type">
+  <form action="/find_type" method="get">
+    <label for="findType">Filter by type:</label>
+    <input type="text" name="type" id="type">
+    <input type="submit" value="Search">
+  </form>
+</div>
+<div class="search_breed">
+  <form action="/find_breed" method="get">
+    <label for="findBreed">Filter by breed:</label>
+    <input type="text" name="breed" id="breed">
+    <input type="submit" value="Search">
+  </form>
+</div>
+
+<table>
   <tr>
     <th>Name</th>
     <th>Type</th>
@@ -34,14 +56,14 @@
         </form>
 
         <a id="edit" href="/animals/<%= animal.id %>/edit">
-          <img src="/images/edit.ico" alt="Edit" width="42" height="42" border="0">
+          <img src="/images/edit.ico" alt="Edit" width="20" height="20" border="0">
         </a>
 
         <form action="/animals/<%= animal.id %>/delete" method="POST">
-          <input id="delete" type="image" src="/images/delete.png" alt="Delete" width=42px height=42px border=0 />
+          <input id="delete" type="image" src="/images/delete.png" alt="Delete" width=20px height=20px border=0 />
         </form>
       </td>
-    </div>    
+    </div>
   </tr>
   <% end %>
 </table>

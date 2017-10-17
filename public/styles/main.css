@@ -1,6 +1,10 @@
+* {
+  font-family: 'Signika', 'Cuprum', sans-serif;
+  color: rgb(101, 32, 125);
+}
+
 body {
   min-height: 75%;
-  font-family: 'Signika', 'Cuprum', sans-serif;
 }
 
 nav {
@@ -22,7 +26,6 @@ nav ul {
   display: flex;
   flex-direction: row;
   list-style-type: none;
-  justify-content: space-around;
 }
 
 nav ul li a:hover {
@@ -52,4 +55,11 @@ p {
 
 #pages {
   padding-top: 25px;
+  background: linear-gradient(rgb(244, 243, 226), white);
+  margin-bottom: 50px;
+}
+
+.search {
+  display: flex;
+  flex-direction: row;
 }

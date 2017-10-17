@@ -43,6 +43,27 @@ class Animal
     return Animal.new(results)
   end
 
+  def self.only_adopt(adoptable)
+    sql = "SELECT * FROM animals WHERE adoptable = $1"
+    values = [adoptable]
+    results = SqlRunner.run(sql, values)
+    return results.map { |animal| Animal.new(animal)}
+  end
+
+  def self.find_type(type)
+    sql = "SELECT * FROM animals WHERE type = $1"
+    values = [type]
+    results = SqlRunner.run(sql, values)
+    return results.map { |animal| Animal.new(animal) }
+  end
+
+  def self.find_breed(breed)
+    sql = "SELECT * FROM animals WHERE breed = $1"
+    values = [breed]
+    results = SqlRunner.run(sql, values)
+    return results.map { |animal| Animal.new(animal) }
+  end
+
   def self.delete_all
     sql = "DELETE FROM animals"
     values = []
