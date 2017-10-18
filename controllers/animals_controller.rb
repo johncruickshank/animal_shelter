@@ -48,7 +48,9 @@ get '/find_breed' do
 end
 
 get '/find_adopt' do
-  @animals = Animal.only_adopt(params[:adoptable])
+  # evaluate params adoptable and make it false if it isn't true
+  adoptable = params[:adoptable] ? true:false
+  @animals = Animal.only_adopt(adoptable)
   @owners = Owner.all()
 erb (:"animals/index")
 end
