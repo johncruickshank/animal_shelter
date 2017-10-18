@@ -30,6 +30,13 @@ post '/owners/:id' do
 end
 
 post '/owners/:id/delete' do
+  @pets = Pet.all()
+  @owner = Owner.new(params)
+  for pet in @pets
+    if pet.owner_id == @owner.id
+      redirect to("/owners")
+    end
+  end
   Owner.destroy(params[:id])
   redirect to("/owners")
 end

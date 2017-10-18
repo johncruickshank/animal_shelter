@@ -6,7 +6,7 @@
   <% for owner in @owners %>
   <tr>
     <td><%= owner.name %></td>
-    <td><a href="/owners/<%= owner.id %>/edit">
+    <td><a id="edit" href="/owners/<%= owner.id %>/edit">
       <img src="/images/edit.ico" alt="Edit" width="25" height="25" border="0">
     </a>
 

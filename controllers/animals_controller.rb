@@ -53,4 +53,5 @@ get '/find_adopt' do
   @animals = Animal.only_adopt(@adoptable)
   @owners = Owner.all()
 erb (:"animals/index")
+
 end
