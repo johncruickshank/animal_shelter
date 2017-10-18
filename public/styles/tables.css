@@ -2,7 +2,11 @@ table {
   width: 100%;
   text-align: center;
   border-collapse: collapse;
-  padding: 0;
+  padding-top: 30px;
+}
+
+#owners {
+  text-align: left;
 }
 
 tr {
@@ -10,7 +14,7 @@ tr {
 }
 
 th {
-  background-color: rgb(64, 177, 226);
+  background-color: rgb(192, 167, 212);
   font-style: bold;
 }
 
@@ -31,16 +35,16 @@ td img:hover {
   transform: scale(3);
 }
 
-#edit {
-  transition-property: none;
+#edit img {
+  transform: none;
 }
 
 table tr:nth-child(even) {
-    background-color: rgb(170, 224, 238);
+    background-color: rgb(213, 213, 213);
 }
 
 table tr:nth-child(odd) {
-    background-color: rgb(144, 212, 245);
+    background-color: rgb(193, 176, 190);
 }
 
 .only_adopt {
